@@ -126,6 +126,12 @@ return [
             'role' => 'user',
             'controller' => 'Articles',
             'action' => ['index', 'view']
+        ],
+        [
+            'role' => 'user',
+            'controller' => 'Articles',
+            'action' => ['edit'],
+            'allowed' => new \CakeDC\Auth\Rbac\Rules\Owner()
         ]
     ]
 ];
