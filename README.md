@@ -1,14 +1,14 @@
-# CakeDC Users Demo
+# CakeDC Users Example
 
-A demo project using CakeDC/Users plugin to help how to use it.
+An example project using CakeDC/Users plugin to help how to use it.
 
 
 ## Installation
 
 1. Clone the repository
 ```bash 
-git@github.com:CakeDC/usersdemo.git
-cd usersdemo
+git@github.com:CakeDC/users-example.git
+cd users-example
 ```
 
 2. Install with composer
