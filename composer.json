@@ -12,6 +12,7 @@
         "cakephp/cakephp": "3.7.*",
         "cakephp/migrations": "^2.0.0",
         "cakephp/plugin-installer": "^1.0",
+        "google/recaptcha": "@stable",
         "league/oauth1-client": "@stable",
         "league/oauth2-facebook": "@stable",
         "league/oauth2-google": "@stable",
