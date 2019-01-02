@@ -1,16 +1,11 @@
 <?php
-
-/**
- * Copyright 2010 - 2017, Cake Development Corporation (https://www.cakedc.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2010 - 2017, Cake Development Corporation (https://www.cakedc.com)
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
 $config = [
-    'OneTimePasswordAuthenticator.login' => true
+    'OneTimePasswordAuthenticator.login' => true,
+    'Users.Social.login' => true,
+    'OAuth.providers.facebook.options.clientId' => filter_var(env('USERS_FACEBOOK_CLIENT_ID'), FILTER_SANITIZE_STRING),
+    'OAuth.providers.facebook.options.clientSecret' => filter_var(env('USERS_FACEBOOK_CLIENT_SECRET'), FILTER_SANITIZE_STRING),
+    'OAuth.providers.twitter.options.clientId' => filter_var(env('USERS_TWITTER_CLIENT_ID'), FILTER_SANITIZE_STRING),
+    'OAuth.providers.twitter.options.clientSecret' => filter_var(env('USERS_TWITTER_CLIENT_SECRET'), FILTER_SANITIZE_STRING)
 ];
 
 return $config;
