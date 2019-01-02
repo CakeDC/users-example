@@ -7,7 +7,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></li>
+        <li><?= $this->AuthLink->link(__('New Article'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="articles index large-9 medium-8 columns content">
@@ -36,8 +36,11 @@
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $article->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id]) ?>
+                    <?= $this->AuthLink->link(__('View'), ['action' => 'view', $article->id]) ?>
+                    <?= $this->AuthLink->link(__('Edit'), ['action' => 'edit', $article->id]) ?>
+                    <?php if ($this->AuthLink->isAuthorized( ['action' => 'delete', $article->id])) {
+                        echo $this->Form->postLink(__('Delete'), ['action' => 'delete', $article->id]);
+                    }?>
                 </td>
             </tr>
             <?php endforeach; ?>

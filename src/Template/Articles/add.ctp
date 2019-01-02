@@ -7,7 +7,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Articles'), ['action' => 'index']) ?></li>
+        <li><?= $this->AuthLink->link(__('List Articles'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="articles form large-9 medium-8 columns content">
