@@ -1,7 +1,7 @@
 # CakeDC Users Example
 
-An example project using CakeDC/Users plugin to help how to use it.
-
+An example application using CakeDC/Users, with social login, 
+two-factor authentication, reCaptcha and Rbac rules configured.
 
 ## Installation
 
