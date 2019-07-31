@@ -6,9 +6,8 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6",
-        "cakedc/users": "dev-develop",
-        "cakephp/cakephp": "3.7.*",
-        "cakephp/migrations": "^2.0.0",
+        "cakedc/users": "dev-9.next",
+        "cakephp/migrations": "4.x-dev",
         "cakephp/plugin-installer": "^1.0",
         "google/recaptcha": "@stable",
         "league/oauth1-client": "@stable",
@@ -20,9 +19,9 @@
         "robthree/twofactorauth": "^1.5.2"
     },
     "require-dev": {
-        "cakephp/bake": "^1.9.0",
+        "cakephp/bake": "4.x-dev",
         "cakephp/cakephp-codesniffer": "^3.0",
-        "cakephp/debug_kit": "^3.17.0",
+        "cakephp/debug_kit": "4.x-dev",
         "josegonzalez/dotenv": "3.*",
         "phpunit/phpunit": "^5|^6",
         "psy/psysh": "@stable"
@@ -55,6 +54,7 @@
         "test": "phpunit --colors=always"
     },
     "prefer-stable": true,
+    "minimum-stability": "dev",
     "config": {
         "sort-packages": true
     }
