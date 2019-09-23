@@ -1,6 +1,6 @@
 <?php
 $config = [
-    'OneTimePasswordAuthenticator.login' => true,
+    'GoogleAuthenticator.login' => true,
     'Users.Social.login' => true,
     'OAuth.providers.facebook.options.clientId' => filter_var(env('USERS_FACEBOOK_CLIENT_ID'), FILTER_SANITIZE_STRING),
     'OAuth.providers.facebook.options.clientSecret' => filter_var(env('USERS_FACEBOOK_CLIENT_SECRET'), FILTER_SANITIZE_STRING),
@@ -17,7 +17,7 @@ $config = [
         // use reCaptcha in registration
         'registration' => true,
         // use reCaptcha in login, valid values are false, true
-        'login' => true,
+        'login' => false,
     ],
 ];
 
