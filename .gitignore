@@ -11,6 +11,9 @@
 docker-compose.yml
 /phpdocker
 
+# Only for demo
+.composer.lock
+
 # OS generated files #
 ######################
 .DS_Store
