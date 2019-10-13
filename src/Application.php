@@ -60,6 +60,26 @@ class Application extends BaseApplication
     }
 
     /**
+     * @inheritDoc
+     */
+    public function pluginBootstrap()
+    {
+        parent::pluginBootstrap();
+
+        Configure::write('Auth.authenticate', [
+            'all' => [
+                'finder' => 'auth',
+                'userModel' => Configure::read('Users.table')
+            ],
+            'Form'  => [
+                'fields' => ['username' => 'email']
+            ],
+            'CakeDC/Auth.RememberMe' => [],
+        ]);
+    }
+
+
+    /**
      * Setup the middleware queue your application will use.
      *
      * @param \Cake\Http\MiddlewareQueue $middlewareQueue The middleware queue to setup.
