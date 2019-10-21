@@ -1,5 +1,6 @@
 <?php
 $config = [
+    'Users.controller' => 'Users',
     'OneTimePasswordAuthenticator.login' => true,
     'Users.Social.login' => true,
     'OAuth.providers.facebook.options.clientId' => filter_var(env('USERS_FACEBOOK_CLIENT_ID'), FILTER_SANITIZE_STRING),

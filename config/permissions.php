@@ -53,8 +53,8 @@ return [
     'CakeDC/Auth.permissions' => [
         //all bypass
         [
-            'prefix' => false,
-            'plugin' => 'CakeDC/Users',
+            'prefix' => null,
+            'plugin' => null,
             'controller' => 'Users',
             'action' => [
                 // LoginTrait
@@ -72,12 +72,18 @@ return [
                 'requestResetPassword',
                 // UserValidationTrait used in PasswordManagementTrait
                 'resendTokenValidation',
-                'linkSocial'
+                'linkSocial',
+                //U2fTrait
+                'u2f',
+                'u2fRegister',
+                'u2fRegisterFinish',
+                'u2fAuthenticate',
+                'u2fAuthenticateFinish'
             ],
             'bypassAuth' => true,
         ],
         [
-            'prefix' => false,
+            'prefix' => null,
             'plugin' => 'CakeDC/Users',
             'controller' => 'SocialAccounts',
             'action' => [
@@ -98,13 +104,13 @@ return [
         //specific actions allowed for the all roles in Users plugin
         [
             'role' => '*',
-            'plugin' => 'CakeDC/Users',
+            'plugin' => null,
             'controller' => 'Users',
             'action' => ['profile', 'logout', 'linkSocial', 'callbackLinkSocial'],
         ],
         [
             'role' => '*',
-            'plugin' => 'CakeDC/Users',
+            'plugin' => null,
             'controller' => 'Users',
             'action' => 'resetOneTimePasswordAuthenticator',
             'allowed' => function (array $user, $role, \Cake\Http\ServerRequest $request) {
