@@ -138,6 +138,13 @@ return [
             'controller' => 'Articles',
             'action' => ['edit'],
             'allowed' => new \CakeDC\Auth\Rbac\Rules\Owner()
-        ]
+        ],
+        [
+            'role' => '*',
+            'plugin' => 'DebugKit',
+            'controller' => ['Requests', 'Panels'],
+            'action' => '*',
+            'bypassAuth' => true,
+        ],
     ]
 ];
