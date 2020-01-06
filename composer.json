@@ -19,9 +19,9 @@
         "robthree/twofactorauth": "^1.5.2"
     },
     "require-dev": {
-        "cakephp/bake": "4.x-dev",
+        "cakephp/bake": "^2.0",
         "cakephp/cakephp-codesniffer": "^3.0",
-        "cakephp/debug_kit": "4.x-dev",
+        "cakephp/debug_kit": "^4.0",
         "josegonzalez/dotenv": "3.*",
         "phpunit/phpunit": "^5|^6",
         "psy/psysh": "@stable"
