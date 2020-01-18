@@ -24,8 +24,8 @@ class ArticlesController extends AppController
             'contain' => ['Users']
         ];
         $articles = $this->paginate($this->Articles);
-
-        $this->set(compact('articles'));
+        $user = $this->request->getAttribute('identity');
+        $this->set(compact('articles', 'user'));
     }
 
     /**
