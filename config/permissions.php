@@ -131,13 +131,13 @@ return [
         [
             'role' => 'user',
             'controller' => 'Articles',
-            'action' => ['index', 'view']
+            'action' => ['index', 'view'],
+            'bypassAuth' => true,
         ],
         [
             'role' => 'user',
             'controller' => 'Articles',
             'action' => ['edit'],
-            'allowed' => new \CakeDC\Auth\Rbac\Rules\Owner()
         ],
     ]
 ];
