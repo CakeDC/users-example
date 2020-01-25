@@ -1,7 +1,18 @@
 # CakeDC Users Example
 
-An example application using CakeDC/Users, with social login, 
-two-factor authentication, reCaptcha and Rbac rules configured.
+An example application using CakeDC/Users with public actions, login with email instead of username and email.
+
+Public actions:
+
+- /
+- /articles/view/[n]
+- /login
+- logout
+
+Protected actions:
+
+- /articles/edit
+- /articles/delete
 
 ## Installation
 
