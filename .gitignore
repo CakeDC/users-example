@@ -1,15 +1,10 @@
 # CakePHP specific files #
 ##########################
-/config/app.php
+/config/app_local.php
 /config/.env
 /logs/*
 /tmp/*
 /vendor/*
-
-# Dev environment #
-###################
-docker-compose.yml
-/phpdocker
 
 # OS generated files #
 ######################
@@ -21,9 +16,12 @@ docker-compose.yml
 Icon?
 ehthumbs.db
 Thumbs.db
+.directory
 
 # Tool specific files #
 #######################
+# PHPUnit
+.phpunit.result.cache
 # vim
 *~
 *.swp
