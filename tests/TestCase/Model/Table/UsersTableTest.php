@@ -3,20 +3,20 @@ declare(strict_types=1);
 
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\ArticlesTable;
+use App\Model\Table\UsersTable;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\ArticlesTable Test Case
+ * App\Model\Table\UsersTable Test Case
  */
-class ArticlesTableTest extends TestCase
+class UsersTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\ArticlesTable
+     * @var \App\Model\Table\UsersTable
      */
-    protected $Articles;
+    protected $Users;
 
     /**
      * Fixtures
@@ -24,8 +24,9 @@ class ArticlesTableTest extends TestCase
      * @var array
      */
     protected $fixtures = [
-        'app.Articles',
         'app.Users',
+        'app.Articles',
+        'app.SocialAccounts',
     ];
 
     /**
@@ -36,8 +37,8 @@ class ArticlesTableTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $config = $this->getTableLocator()->exists('Articles') ? [] : ['className' => ArticlesTable::class];
-        $this->Articles = $this->getTableLocator()->get('Articles', $config);
+        $config = $this->getTableLocator()->exists('Users') ? [] : ['className' => UsersTable::class];
+        $this->Users = $this->getTableLocator()->get('Users', $config);
     }
 
     /**
@@ -47,7 +48,7 @@ class ArticlesTableTest extends TestCase
      */
     public function tearDown(): void
     {
-        unset($this->Articles);
+        unset($this->Users);
 
         parent::tearDown();
     }

@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 namespace App\Test\TestCase\Controller;
 
-use App\Controller\ArticlesController;
+use App\Controller\SocialAccountsController;
 use Cake\TestSuite\IntegrationTestTrait;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Controller\ArticlesController Test Case
+ * App\Controller\SocialAccountsController Test Case
  *
- * @uses \App\Controller\ArticlesController
+ * @uses \App\Controller\SocialAccountsController
  */
-class ArticlesControllerTest extends TestCase
+class SocialAccountsControllerTest extends TestCase
 {
     use IntegrationTestTrait;
 
@@ -22,7 +22,7 @@ class ArticlesControllerTest extends TestCase
      * @var array
      */
     protected $fixtures = [
-        'app.Articles',
+        'app.SocialAccounts',
         'app.Users',
     ];
 
