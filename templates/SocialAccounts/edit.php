@@ -12,7 +12,7 @@
                 __('Delete'),
                 ['action' => 'delete', $socialAccount->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $socialAccount->id), 'class' => 'side-nav-item']
-            ) ?>
+) ?>
             <?= $this->Html->link(__('List Social Accounts'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>

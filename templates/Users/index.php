@@ -33,7 +33,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user): ?>
+                <?php foreach ($users as $user) : ?>
                 <tr>
                     <td><?= h($user->id) ?></td>
                     <td><?= h($user->username) ?></td>

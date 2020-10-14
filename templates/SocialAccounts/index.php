@@ -28,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($socialAccounts as $socialAccount): ?>
+                <?php foreach ($socialAccounts as $socialAccount) : ?>
                 <tr>
                     <td><?= h($socialAccount->id) ?></td>
                     <td><?= $socialAccount->has('user') ? $this->Html->link($socialAccount->user->id, ['controller' => 'Users', 'action' => 'view', $socialAccount->user->id]) : '' ?></td>
