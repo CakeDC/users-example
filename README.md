@@ -1,53 +1,37 @@
-# CakePHP Application Skeleton
+# CakeDC Users Example
 
-[![Build Status](https://img.shields.io/github/workflow/status/cakephp/app/CakePHP%20App%20CI/master?style=flat-square)](https://github.com/cakephp/app/actions)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
-
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
-
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+An example application using CakeDC/Users, with social login, 
+two-factor authentication, reCaptcha and Rbac rules configured.
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-
-```bash
-composer create-project --prefer-dist cakephp/app
+1. Clone the repository
+```bash 
+git@github.com:CakeDC/users-example.git
+cd users-example
 ```
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
+2. Install with composer
 ```bash
-composer create-project --prefer-dist cakephp/app myapp
+composer install --prefer-dist
 ```
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+3. Setup your database info at config/app.php, see Datasources.default
+
+4. At config/.env, set your facebook/twitter credentials for social login
+and reCaptcha credentials.  
+
+5. Execute setup script, this run the needed migrations and create demo users and articles.
 
 ```bash
-bin/cake server -p 8765
+ ./setup.sh ApasswordForAllDemoUsersToUseAtLoginPage
 ```
 
-Then visit `http://localhost:8765` to see the welcome page.
+Now you can access the app with one of the following users using the password you choosed:
 
-## Update
+- user1
+- user2
+- admin1
+- admin2
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
 
-## Configuration
-
-Read and edit the environment specific `config/app_local.php` and setup the 
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
-
-## Layout
-
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
