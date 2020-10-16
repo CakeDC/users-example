@@ -5,11 +5,11 @@ $config = [
             'className' => 'Authentication.Password',
             'fields' => [
                 'username' => ['username', 'email'],
-                'password' => 'password'
+                'password' => 'password',
             ],
             'resolver' => [
                 'className' => 'Authentication.Orm',
-                'finder' => 'active'
+                'finder' => 'active',
             ],
             'passwordHasher' => [
                 'className' => 'Authentication.Fallback',
@@ -18,12 +18,12 @@ $config = [
                     [
                         'className' => 'Authentication.Legacy',
                         'hashType' => 'md5',
-                        'salt' => false // turn off default usage of salt
+                        'salt' => false, // turn off default usage of salt
                     ],
-                ]
-            ]
+                ],
+            ],
         ],
-    ]
+    ],
 ];
 
 return $config;
