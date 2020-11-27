@@ -9,6 +9,7 @@ two-factor authentication, reCaptcha and Rbac rules configured.
 ```bash 
 git@github.com:CakeDC/users-example.git
 cd users-example
+git checkout 9.next
 ```
 
 2. Install with composer

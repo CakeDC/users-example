@@ -72,7 +72,13 @@ return [
                 'requestResetPassword',
                 // UserValidationTrait used in PasswordManagementTrait
                 'resendTokenValidation',
-                'linkSocial'
+                'linkSocial',
+                //U2F actions
+                'u2f',
+                'u2fRegister',
+                'u2fRegisterFinish',
+                'u2fAuthenticate',
+                'u2fAuthenticateFinish',
             ],
             'bypassAuth' => true,
         ],
@@ -132,6 +138,6 @@ return [
             'controller' => 'Articles',
             'action' => ['edit'],
             'allowed' => new \CakeDC\Auth\Rbac\Rules\Owner()
-        ]
+        ],
     ]
 ];

@@ -6,9 +6,8 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6",
-        "cakedc/users": "dev-develop",
-        "cakephp/cakephp": "3.7.*",
-        "cakephp/migrations": "^2.0.0",
+        "cakedc/users": "^9.0.0",
+        "cakephp/migrations": "^3.0.0",
         "cakephp/plugin-installer": "^1.0",
         "google/recaptcha": "@stable",
         "league/oauth1-client": "@stable",
@@ -20,9 +19,9 @@
         "robthree/twofactorauth": "^1.5.2"
     },
     "require-dev": {
-        "cakephp/bake": "^1.9.0",
+        "cakephp/bake": "^2.2.0",
         "cakephp/cakephp-codesniffer": "^3.0",
-        "cakephp/debug_kit": "^3.17.0",
+        "cakephp/debug_kit": "^4.3.9",
         "josegonzalez/dotenv": "3.*",
         "phpunit/phpunit": "^5|^6",
         "psy/psysh": "@stable"
@@ -45,7 +44,6 @@
     "scripts": {
         "post-install-cmd": "App\\Console\\Installer::postInstall",
         "post-create-project-cmd": "App\\Console\\Installer::postInstall",
-        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump",
         "check": [
             "@test",
             "@cs-check"
@@ -55,6 +53,7 @@
         "test": "phpunit --colors=always"
     },
     "prefer-stable": true,
+    "minimum-stability": "dev",
     "config": {
         "sort-packages": true
     }
