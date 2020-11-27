@@ -51,7 +51,7 @@ class Application extends BaseApplication
         if (Configure::read('debug')) {
 //            $this->addPlugin('DebugKit');
         }
-
+        $this->addPlugin('Migrations');
         $this->addPlugin(\CakeDC\Users\Plugin::class);
         Configure::write('Users.config', ['users']);
     }
