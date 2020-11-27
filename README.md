@@ -7,7 +7,7 @@ two-factor authentication, reCaptcha and Rbac rules configured.
 
 1. Clone the repository
 ```bash
-git@github.com:CakeDC/users-example.git
+git clone git@github.com:CakeDC/users-example.git
 cd users-example
 ```
 
