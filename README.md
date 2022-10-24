@@ -9,6 +9,7 @@ two-factor authentication, reCaptcha and Rbac rules configured.
 ```bash
 git clone git@github.com:CakeDC/users-example.git
 cd users-example
+git checkout 11.next-cake4
 ```
 
 2. Install with composer
